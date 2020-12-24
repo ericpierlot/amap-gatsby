@@ -6,8 +6,11 @@ import styled from "styled-components"
 // Images
 import ArrowRight from "../images/fleches-04.png"
 import ArrowLeft from "../images/fleches-05.png"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import Pommes from "../images/pommes2000px-1024x682.jpg"
+import Chicken from "../images/AdobeStock_220277518-1024x465.jpeg"
+import Honey from "../images/POT-DE-MIEL2000px-1024x682.jpg"
+import Pain from "../images/PAIN-BIO-COMPLET-scaled-1-1024x576.jpeg"
+import ProducteurMapien from "../images/PRODUCTEUR-AMAPIEN-02-1024x922.jpg"
 
 import {
   TopAccroche,
@@ -26,7 +29,6 @@ const ImageBlock = styled.div`
   width: 100%;
   display: flex;
   height: 180px;
-
   @media (max-width: 1100px) {
     flex-direction: column;
     width: 90%;
@@ -38,19 +40,12 @@ const ImageBlock = styled.div`
     position: relative;
     height: 180px;
     overflow: hidden;
-
     transition: background-color 330ms linear;
 
-    @media (max-width: 1100px) {
-      margin: auto;
-      border-radius: 5px;
-    }
-    span {
-      display: none;
-    }
     &:hover {
       background-color: #846adc;
       cursor: pointer;
+
       span {
         padding: 1rem;
         width: 100%;
@@ -66,32 +61,27 @@ const ImageBlock = styled.div`
         z-index: 5;
       }
     }
+    @media (max-width: 1100px) {
+      width: 400px;
+      margin: auto;
+      border-radius: 5px;
+    }
+    span {
+      display: none;
+    }
   }
   img {
     z-index: -1;
+    width: 300px;
+    height: 200px;
+    @media (max-width: 1100px) {
+      width: 400px;
+    }
   }
 
   margin-bottom: 5rem;
 `
 const IndexPage = () => {
-  const images = useStaticQuery(graphql`
-    {
-      allFile(filter: { sourceInstanceName: { eq: "images" } }) {
-        edges {
-          node {
-            relativePath
-            childImageSharp {
-              fixed {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  console.log(images)
   return (
     <Layout>
       <SEO title="Légumes, oeuf, pain bio" />
@@ -139,7 +129,7 @@ const IndexPage = () => {
             </Link>
           </p>
         </BlocText>
-        <Img fixed={images.allFile.edges[17].node.childImageSharp.fixed} />
+        <img src={ProducteurMapien} alt="Les producteur AMAPIENS" />
         <BlocText>
           <Title1>Ethique de l'AMAP !</Title1>
           <p>
@@ -171,43 +161,31 @@ const IndexPage = () => {
             <span>
               Frédéric Soula - <p>Pommes & Raisins</p>
             </span>
-            <Img fixed={images.allFile.edges[26].node.childImageSharp.fixed} />
+            <img src={Pommes} alt="panier de pommes" />
           </div>
           <div>
             <span>
               Elisabeth Company - <p>Le champ du Coq</p>
             </span>
-            <Img
-              fixed={images.allFile.edges[19].node.childImageSharp.fixed}
-              alt="coq en plen air"
-            />
+            <img src={Chicken} alt="Poules en plein air" />
           </div>
           <div>
             <span>
               Antoine ESTEBAN - <p>Producteur de légumes BIO</p>
             </span>
-            <Img
-              fixed={images.allFile.edges[27].node.childImageSharp.fixed}
-              alt="légumes Bio"
-            />
+            <img src={Honey} alt="Des légumes bio" />
           </div>
           <div>
             <span>
               Malvina MALBEC & Clément Aude - <p>Miel BIO</p>
             </span>
-            <Img
-              fixed={images.allFile.edges[27].node.childImageSharp.fixed}
-              alt="Miel bio"
-            />
+            <img src={Honey} alt="Un pot de miel bio" />
           </div>
           <div>
             <span>
               Julie Saintoul & Romain Vepierre - <p>LA CONQUETE DU PAIN</p>
             </span>
-            <Img
-              fixed={images.allFile.edges[31].node.childImageSharp.fixed}
-              alt="pain bio"
-            />
+            <img src={Pain} alt="Un pain à l'ancienne bio" />
           </div>
         </ImageBlock>
       </Wrapper>
