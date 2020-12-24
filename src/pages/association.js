@@ -13,7 +13,7 @@ import {
 
 const AssociationPage = () => (
   <Layout>
-    <SEO title="Page two" />
+    <SEO title="L'association" />
     <TopAccroche>
       <Title1>Manger local & bio</Title1>
       <Title2>Une amap c'est quoi ?</Title2>
