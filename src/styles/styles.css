@@ -1,0 +1,59 @@
+@font-face {
+  font-family: Geometos;
+  src: url("../fonts/Geometos.ttf");
+}
+@font-face {
+  font-family: Gotham bold;
+  src: url("../fonts/Gotham Bold.otf");
+}
+@font-face {
+  font-family: Gotham;
+  src: url("../fonts/Gotham Regular.otf");
+}
+@font-face {
+  font-family: Olivier;
+  src: url("../fonts/olivier_demo.ttf");
+}
+@font-face {
+  font-family: Archivo;
+  src: url("../fonts/Archivo-Regular.ttf");
+}
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: RobotoMedium;
+  src: url("../fonts/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: RobotoLight;
+  src: url("../fonts/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: RobotoThin;
+  src: url("../fonts/Roboto-Thin.ttf");
+}
+/* BODY GENERAL PARAMS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+a:hover {
+  color: black;
+}
+
+body {
+  font-family: "Archivo";
+  color: #7A7A7A;
+}

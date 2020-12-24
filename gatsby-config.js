@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `AMAP L'isle sur la sorgue`,
+    description: `AMAP L'isle sur la sorgue. Des paniers de légumes bio et de saison toutes les semaines à l'isle sur la sorgue.`,
+    author: `Eric`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,6 +27,15 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    //   {
+    //     resolve: `gatsby-source-wordpress`,
+    //     options: {
+    //         baseUrl: `amap-islesursorgue.fr`,
+    //         protocol: `https`,
+    //         includedRoutes: ['**/posts'],
+    //         useACF: false
+    //     }
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
