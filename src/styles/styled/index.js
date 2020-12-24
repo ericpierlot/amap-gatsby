@@ -4,7 +4,7 @@ import GreenWave from "../../images/acc.png"
 export const TopAccroche = styled.div`
   display: flex;
   justify-content: flex-end;
-  width: 40%;
+  width: 100%;
   margin: auto;
   div {
     width: 50%;
@@ -41,6 +41,7 @@ export const Btn = styled.button`
   border-radius: 30px;
   color: white;
   background-color: #5c026a;
+  cursor: pointer;
   transition: background-color 330ms ease;
   :hover {
     background-color: #846adc;

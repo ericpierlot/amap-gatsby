@@ -15,8 +15,10 @@ const PaniersPage = () => (
   <Layout>
     <SEO title="Les paniers" />
     <TopAccroche>
-      <Title1>Manger local & bio</Title1>
-      <Title2>Une amap c'est quoi ?</Title2>
+      <div>
+        <Title1>Manger local & bio</Title1>
+        <Title2>Une amap c'est quoi ?</Title2>
+      </div>
     </TopAccroche>
   </Layout>
 )

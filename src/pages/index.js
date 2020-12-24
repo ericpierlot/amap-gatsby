@@ -4,13 +4,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
 // Images
-import ProdAmapien from "../images/PRODUCTEUR-AMAPIEN-02-1024x922.jpg"
 import ArrowRight from "../images/fleches-04.png"
 import ArrowLeft from "../images/fleches-05.png"
-import Pommes from "../images/pommes2000px-1024x682.jpg"
-import Chicken from "../images/AdobeStock_220277518-1024x465.jpeg"
-import Honeypot from "../images/POT-DE-MIEL2000px-1024x682.jpg"
-import Bread from "../images/PAIN-BIO-COMPLET-scaled-1-1024x576.jpeg"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -182,25 +177,37 @@ const IndexPage = () => {
             <span>
               Elisabeth Company - <p>Le champ du Coq</p>
             </span>
-            <Img fixed={images.allFile.edges[19].node.childImageSharp.fixed} />
+            <Img
+              fixed={images.allFile.edges[19].node.childImageSharp.fixed}
+              alt="coq en plen air"
+            />
           </div>
           <div>
             <span>
               Antoine ESTEBAN - <p>Producteur de légumes BIO</p>
             </span>
-            <Img fixed={images.allFile.edges[27].node.childImageSharp.fixed} />
+            <Img
+              fixed={images.allFile.edges[27].node.childImageSharp.fixed}
+              alt="légumes Bio"
+            />
           </div>
           <div>
             <span>
               Malvina MALBEC & Clément Aude - <p>Miel BIO</p>
             </span>
-            <Img fixed={images.allFile.edges[27].node.childImageSharp.fixed} />
+            <Img
+              fixed={images.allFile.edges[27].node.childImageSharp.fixed}
+              alt="Miel bio"
+            />
           </div>
           <div>
             <span>
               Julie Saintoul & Romain Vepierre - <p>LA CONQUETE DU PAIN</p>
             </span>
-            <Img fixed={images.allFile.edges[31].node.childImageSharp.fixed} />
+            <Img
+              fixed={images.allFile.edges[31].node.childImageSharp.fixed}
+              alt="pain bio"
+            />
           </div>
         </ImageBlock>
       </Wrapper>

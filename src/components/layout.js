@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import "../styles/styles.css"
-import logoAMAP from "../images/AMAP-3.png"
+//import logoAMAP from "../images/AMAP-3.png"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 
