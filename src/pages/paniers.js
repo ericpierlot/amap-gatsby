@@ -19,7 +19,8 @@ const Container = styled.section`
   width: 60%;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
   align-items: center;
 
   @media (max-width: 1500px) {
@@ -36,7 +37,7 @@ const Container = styled.section`
 `
 
 const Bloc = styled.div`
-  width: 45%;
+  min-width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,6 +65,7 @@ const Bloc = styled.div`
     text-align: left;
     padding-bottom: 1rem;
   }
+
   margin-bottom: 7rem;
 `
 

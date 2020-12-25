@@ -33,7 +33,7 @@ export const CardAutres = ({
 }) => {
   return (
     <Card>
-      <img width="128" height="auto" src={image} alt={alt} />
+      <img width="128" height="160" src={image} alt={alt} />
       <Title1>{title}</Title1>
       <em>{description}</em>
       <Btn>
