@@ -6,8 +6,11 @@ import styled from "styled-components"
 // Images
 import ArrowRight from "../images/fleches-04.png"
 import ArrowLeft from "../images/fleches-05.png"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import ProducteurAmapien from "../images/PRODUCTEUR-AMAPIEN-02-1024x922.jpg"
+import Pommes from "../images/pommes2000px-1024x682.jpg"
+import Poules from "../images/AdobeStock_220277518-1024x465.jpeg"
+import Miel from "../images/POT-DE-MIEL2000px-1024x682.jpg"
+import Pain from "../images/PAIN-BIO-COMPLET-scaled-1-1024x576.jpeg"
 
 import {
   TopAccroche,
@@ -22,74 +25,65 @@ import {
   TopWrapper,
 } from "../styles/styled"
 
-const ImageBlock = styled.div`
-  width: 100%;
+const ImageContainer = styled.div`
   display: flex;
-  height: 180px;
+  flex-direction: row;
+  margin-bottom: 5rem;
+`
 
-  @media (max-width: 1100px) {
+const BlocImages = styled.div`
+  display: flex;
+
+  @media (max-width: 1150px) {
     flex-direction: column;
-    width: 90%;
-    height: 1000px;
     justify-content: center;
     align-items: center;
   }
+
   div {
     position: relative;
     height: 180px;
-    overflow: hidden;
 
-    transition: background-color 330ms linear;
-
-    @media (max-width: 1100px) {
-      margin: auto;
-      border-radius: 5px;
-    }
+    cursor: pointer;
     span {
-      display: none;
+      position: absolute;
+      display: flex;
+      opacity: 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      padding: 1rem;
+      text-align: center;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      background-color: #abd8bb;
+      transition: opacity 800ms ease;
     }
-    &:hover {
-      background-color: #846adc;
-      cursor: pointer;
-      span {
-        padding: 1rem;
-        width: 100%;
-        color: white;
-        font-size: 1.2rem;
-        font-weight: bold;
-        position: absolute;
-        text-align: center;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: inline;
-        z-index: 5;
-      }
+    &:hover span {
+      opacity: 1;
     }
-  }
-  img {
-    z-index: -1;
   }
 
-  margin-bottom: 5rem;
-`
-const IndexPage = () => {
-  const images = useStaticQuery(graphql`
-    {
-      allFile(filter: { sourceInstanceName: { eq: "images" } }) {
-        edges {
-          node {
-            relativePath
-            childImageSharp {
-              fixed {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }
-      }
+  img {
+    width: auto;
+    height: 100%;
+
+    @media (min-width: 1150px) {
+      width: 220px;
+      height: auto;
     }
-  `)
+
+    @media (min-width: 1600px) {
+      width: auto;
+      height: 100%;
+    }
+  }
+`
+
+const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Légumes, oeuf, pain bio" />
@@ -132,12 +126,20 @@ const IndexPage = () => {
               textDecoration: "underline",
             }}
           >
-            <Link to="https://www.amap-islesursorgue.fr/aptymemo/2019/09/Charte_des_AMAP.pdf">
+            <a
+              href="https://www.amap-islesursorgue.fr/aptymemo/2019/09/Charte_des_AMAP.pdf"
+              target="blank"
+            >
               Charte des AMAP
-            </Link>
+            </a>
           </p>
         </BlocText>
-        <Img fixed={images.allFile.edges[17].node.childImageSharp.fixed} />
+        <img
+          src={ProducteurAmapien}
+          alt="Nos producteurs AMAPIENS"
+          width="450"
+          height="411"
+        />
         <BlocText>
           <Title1>Ethique de l'AMAP !</Title1>
           <p>
@@ -160,54 +162,59 @@ const IndexPage = () => {
       </Container>
       <Wrapper>
         <TopWrapper>
-          <img src={ArrowLeft} alt="présentation des producteurs" />
+          <img src={ArrowLeft} alt="Flèche de direction à gauche" />
           <Title2>Découvrez nos producteurs</Title2>
-          <img src={ArrowRight} alt="Présentation de nos producteurs" />
+          <img src={ArrowRight} alt="Flèche de direction à droite" />
         </TopWrapper>
-        <ImageBlock>
-          <div>
-            <span>
-              Frédéric Soula - <p>Pommes & Raisins</p>
-            </span>
-            <Img fixed={images.allFile.edges[26].node.childImageSharp.fixed} />
-          </div>
-          <div>
-            <span>
-              Elisabeth Company - <p>Le champ du Coq</p>
-            </span>
-            <Img
-              fixed={images.allFile.edges[19].node.childImageSharp.fixed}
-              alt="coq en plen air"
-            />
-          </div>
-          <div>
-            <span>
-              Antoine ESTEBAN - <p>Producteur de légumes BIO</p>
-            </span>
-            <Img
-              fixed={images.allFile.edges[27].node.childImageSharp.fixed}
-              alt="légumes Bio"
-            />
-          </div>
-          <div>
-            <span>
-              Malvina MALBEC & Clément Aude - <p>Miel BIO</p>
-            </span>
-            <Img
-              fixed={images.allFile.edges[27].node.childImageSharp.fixed}
-              alt="Miel bio"
-            />
-          </div>
-          <div>
-            <span>
-              Julie Saintoul & Romain Vepierre - <p>LA CONQUETE DU PAIN</p>
-            </span>
-            <Img
-              fixed={images.allFile.edges[31].node.childImageSharp.fixed}
-              alt="pain bio"
-            />
-          </div>
-        </ImageBlock>
+        <ImageContainer>
+          <BlocImages>
+            <div>
+              <span>
+                Frédéric Soula - <p>Pommes & Raisins</p>
+              </span>
+              <img
+                src={Pommes}
+                alt="Panier de pommes"
+                width="270"
+                height="180"
+              />
+            </div>
+            <div>
+              <span>
+                Elisabeth Company - <p>Le champ du Coq</p>
+              </span>
+              <img
+                src={Poules}
+                alt="Poulailler en plein air"
+                width="396"
+                height="180"
+              />
+            </div>
+            <div>
+              <span>
+                Antoine ESTEBAN - <p>Producteur de légumes BIO</p>
+              </span>
+              <img
+                src={Pommes}
+                alt="Une cagette de légumes"
+                width="270"
+                height="180"
+              />
+            </div>
+            <div>
+              <span>
+                Malvina MALBEC & Clément Aude - <p>Miel BIO</p>
+              </span>
+              <img src={Miel} alt="Un pot de miel" width="270" height="180" />
+            </div>
+            <div>
+              <span>
+                Julie Saintoul & Romain Vepierre - <p>LA CONQUETE DU PAIN</p>
+              </span>
+              <img src={Pain} alt="Un pain bio" width="270" height="180" />
+            </div>
+          </BlocImages>
+        </ImageContainer>
       </Wrapper>
     </Layout>
   )

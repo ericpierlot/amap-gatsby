@@ -1,38 +1,19 @@
-@font-face {
-  font-family: Geometos;
-  src: url("../fonts/Geometos.ttf");
-}
-@font-face {
-  font-family: Gotham bold;
-  src: url("../fonts/Gotham Bold.otf");
-}
-@font-face {
-  font-family: Gotham;
-  src: url("../fonts/Gotham Regular.otf");
-}
+/* FONTS */
 @font-face {
   font-family: Olivier;
-  src: url("../fonts/olivier_demo.ttf");
-}
-@font-face {
-  font-family: Archivo;
-  src: url("../fonts/Archivo-Regular.ttf");
+  src: url("./olivier_demo.ttf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: Roboto;
-  src: url("../fonts/Roboto-Regular.ttf");
+  src: url("./Roboto-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: RobotoMedium;
-  src: url("../fonts/Roboto-Medium.ttf");
-}
-@font-face {
-  font-family: RobotoLight;
-  src: url("../fonts/Roboto-Light.ttf");
-}
-@font-face {
-  font-family: RobotoThin;
-  src: url("../fonts/Roboto-Thin.ttf");
+  font-weight: 700;
+  src: url("./Roboto-Medium.ttf") format("truetype");
+  font-display: swap;
 }
 /* BODY GENERAL PARAMS */
 * {
@@ -47,13 +28,14 @@ ul {
 
 a {
   text-decoration: none;
-  color: grey;
+  color: #7A7A7A;
+  cursor: pointer;
 }
 a:hover {
   color: black;
 }
 
 body {
-  font-family: "Archivo";
-  color: #7A7A7A;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  color: black;
 }

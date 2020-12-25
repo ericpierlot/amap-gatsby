@@ -2,38 +2,22 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import "../styles/styles.css"
-//import logoAMAP from "../images/AMAP-3.png"
-import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
+import logoAMAP from "../images/AMAP-3.png"
 
 const Layout = ({ children }) => {
-  const logo = useStaticQuery(graphql`
-    {
-      file(relativePath: { eq: "AMAP-3.png" }) {
-        childImageSharp {
-          fixed {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
   return (
     <>
       <Header>
         <Navigation>
           <Link to="/">
-            <Img
-              fixed={logo.file.childImageSharp.fixed}
-              alt="Logo du site web"
-            />
+            <img src={logoAMAP} alt="logo de l'AMAP Isle sur la Sorgues" />
           </Link>
           <ul>
             <li>
               <Link to="/association">L'association</Link>
             </li>
             <li>
-              <Link to="/">Les paniers</Link>
+              <Link to="/paniers">Les paniers</Link>
             </li>
             <li>
               <Link to="/">Les producteurs</Link>
@@ -56,10 +40,10 @@ const Layout = ({ children }) => {
         <FooterNav>
           <ul>
             <li>
-              <Link to="/">L'association</Link>
+              <Link to="/association">L'association</Link>
             </li>
             <li>
-              <Link to="/">Les paniers</Link>
+              <Link to="/paniers">Les paniers</Link>
             </li>
             <li>
               <Link to="/">Les producteurs</Link>
@@ -93,7 +77,7 @@ const Header = styled.header`
 const Navigation = styled.nav`
   padding-top: 1rem;
   img {
-    width: 220px;
+    width: 70%;
   }
   width: 100%;
   margin: auto;
@@ -193,5 +177,6 @@ const Footer = styled.footer`
 
 const Main = styled.main`
   margin-top: 5rem;
+  max-width: 100vw;
   min-height: 100vh;
 `

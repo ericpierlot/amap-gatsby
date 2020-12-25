@@ -10,8 +10,8 @@ import {
   ImageWave,
   GreenBlock,
 } from "../styles/styled"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import DirectCustomer from "../images/direct-customer-02-1024x343.png"
+import Rassemblement from "../images/amapien-producteur-association-01-1024x1024.png"
 
 const Container = styled.div`
   width: 60%;
@@ -33,7 +33,6 @@ const Left = styled.div`
   p {
     line-height: 1.8em;
     padding-bottom: 1.8rem;
-    font-family: RobotoMedium, sans-serif;
   }
   @media (max-width: 1100px) {
     width: 100%;
@@ -71,7 +70,13 @@ const Left = styled.div`
   }
 `
 
-const Right = styled.div``
+const Right = styled.div`
+  @media (max-width: 1100px) {
+    img {
+      width: 90%;
+    }
+  }
+`
 
 const BlocLinear = styled.div`
   margin-top: 7rem;
@@ -81,8 +86,8 @@ const BlocLinear = styled.div`
   justify-content: center;
   align-items: center;
   color: white;
+  font-weight: 700;
   text-align: center;
-  font-family: "gotham bold", sans-serif;
   text-transform: uppercase;
   background: rgb(179, 225, 194);
   background: linear-gradient(
@@ -108,36 +113,24 @@ const BlocGrey = styled.div`
   display: flex;
   align-items: center;
   font-size: 1.4rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  line-height: 3rem;
+  font-weight: 700;
   color: black;
   text-transform: uppercase;
   ul {
     width: 60%;
     margin: auto;
+    li {
+      padding-bottom: 1.5rem;
+    }
+    @media (max-width: 1100px) {
+      width: 90%;
+    }
   }
   li:first-letter {
     padding-right: 2rem;
   }
 `
 const AssociationPage = () => {
-  const data = useStaticQuery(graphql`
-    {
-      allFile(filter: { sourceInstanceName: { eq: "images" } }) {
-        edges {
-          node {
-            relativePath
-            childImageSharp {
-              fixed {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
   return (
     <Layout>
       <SEO title="L'association" />
@@ -199,9 +192,11 @@ const AssociationPage = () => {
           <Btn>Voir les paniers !</Btn>
         </Left>
         <Right>
-          <Img
-            fixed={data.allFile.edges[28].node.childImageSharp.fixed}
-            alt="partage des producteurs"
+          <img
+            src={DirectCustomer}
+            alt="Représentation de comment fonctionne l'AMAP"
+            width="500"
+            height="auto"
           />
         </Right>
       </Container>
@@ -225,9 +220,11 @@ const AssociationPage = () => {
       </BlocGrey>
       <Container>
         <Right>
-          <Img
-            fixed={data.allFile.edges[21].node.childImageSharp.fixed}
-            alt="Rassemblement de producteurs"
+          <img
+            src={Rassemblement}
+            alt="Rassemblement des AMAPIENS"
+            width="500"
+            height="auto"
           />
         </Right>
         <Left>

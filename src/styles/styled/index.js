@@ -27,7 +27,6 @@ export const Title1 = styled.h2`
   padding-bottom: 1rem;
 `
 export const Title2 = styled.h2`
-  font-family: "Geometos", sans-serif;
   font-size: 2.2rem;
   text-transform: uppercase;
   color: #b3e1c2;
@@ -40,9 +39,10 @@ export const Btn = styled.button`
   outline: none;
   border-radius: 30px;
   color: white;
+  font-weight: 700;
   background-color: #5c026a;
   cursor: pointer;
-  transition: background-color 330ms ease;
+  transition: all 330ms ease;
   :hover {
     background-color: #846adc;
   }
@@ -64,7 +64,7 @@ export const GreenBlock = styled.div`
   height: 200px;
   text-align: center;
   color: white;
-  font-family: "gotham bold", sans-serif;
+  font-weight: bold;
   text-transform: uppercase;
   background-color: #abd8bb;
   transform: translateY(-1px);
@@ -90,7 +90,7 @@ export const Container = styled.div`
   margin: auto;
   display: flex;
   img {
-    width: 33.33%;
+    width: 40%;
   }
   @media (max-width: 1100px) {
     flex-direction: column;
@@ -98,8 +98,8 @@ export const Container = styled.div`
     align-items: center;
     width: 90%;
     img {
-      padding: 2rem 0;
-      width: 80%;
+      margin: 2rem 0;
+      min-width: 500px;
     }
   }
   @media (max-width: 1500px) {
@@ -108,8 +108,8 @@ export const Container = styled.div`
 `
 
 export const BlocText = styled.div`
-  width: 33.33%;
   text-align: center;
+
   p {
     font-family: "RobotoLight", sans-serif;
     font-size: 0.9rem;
