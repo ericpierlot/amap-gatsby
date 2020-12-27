@@ -25,25 +25,60 @@ const Layout = ({ children }) => {
         <Navigation>
           <Link to="/">
             {children[0].props.title === "Légumes, oeuf, pain bio" && (
-              <img src={logoAMAP} alt="logo de l'AMAP Isle sur la Sorgues" />
+              <img
+                src={logoAMAP}
+                alt="logo de l'AMAP Isle sur la Sorgues"
+                width="294px"
+                height="132px"
+              />
             )}
             {children[0].props.title === "L'association" && (
-              <img src={logoAMAP2} alt="logo de l'AMAP Isle sur la Sorgues" />
+              <img
+                src={logoAMAP2}
+                alt="logo de l'AMAP Isle sur la Sorgues"
+                width="294px"
+                height="132px"
+              />
             )}
             {children[0].props.title === "Les paniers" && (
-              <img src={logoAMAP3} alt="logo de l'AMAP Isle sur la Sorgues" />
+              <img
+                src={logoAMAP3}
+                alt="logo de l'AMAP Isle sur la Sorgues"
+                width="294px"
+                height="132px"
+              />
             )}
             {children[0].props.title === "Les producteurs" && (
-              <img src={logoAMAP} alt="logo de l'AMAP Isle sur la Sorgues" />
+              <img
+                src={logoAMAP}
+                alt="logo de l'AMAP Isle sur la Sorgues"
+                width="294px"
+                height="132px"
+              />
             )}
             {children[0].props.title === "Actualités" && (
-              <img src={logoAMAP2} alt="logo de l'AMAP Isle sur la Sorgues" />
+              <img
+                src={logoAMAP2}
+                alt="logo de l'AMAP Isle sur la Sorgues"
+                width="294px"
+                height="132px"
+              />
             )}
             {children[0].props.title === "Contact" && (
-              <img src={logoAMAP3} alt="logo de l'AMAP Isle sur la Sorgues" />
+              <img
+                src={logoAMAP3}
+                alt="logo de l'AMAP Isle sur la Sorgues"
+                width="294px"
+                height="132px"
+              />
             )}
             {children[0].props.title === "Devenir membre" && (
-              <img src={logoAMAP} alt="logo de l'AMAP Isle sur la Sorgues" />
+              <img
+                src={logoAMAP}
+                alt="logo de l'AMAP Isle sur la Sorgues"
+                width="294px"
+                height="132px"
+              />
             )}
           </Link>
           <ul>
@@ -139,9 +174,7 @@ const Header = styled.header`
 
 const Navigation = styled.nav`
   padding-top: 1rem;
-  img {
-    width: 70%;
-  }
+
   width: 100%;
   margin: auto;
   display: flex;
@@ -158,15 +191,16 @@ const Navigation = styled.nav`
   }
   li {
     display: inline-block;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     letter-spacing: 0.02rem;
     font-weight: bold;
     text-transform: uppercase;
+    margin: 0 1rem;
   }
   @media (min-width: 1100px) {
-    width: 80%;
+    width: 90%;
     ul {
-      width: 60%;
+      width: 70%;
       display: flex;
       justify-content: space-between;
     }
@@ -175,7 +209,7 @@ const Navigation = styled.nav`
     }
   }
   @media (min-width: 1500px) {
-    width: 60%;
+    width: 80%;
     margin: auto;
     display: flex;
     justify-content: space-between;

@@ -45,9 +45,19 @@ const ProducteursPage = () => (
     <SEO title="Les producteurs" />
     <Wrapper>
       <TopWrapper>
-        <img src={ArrowLeft} alt="Flèche de direction à gauche" />
+        <img
+          src={ArrowLeft}
+          alt="Flèche de direction à gauche"
+          width="auto"
+          height="77px"
+        />
         <Title2>Découvrez nos producteurs</Title2>
-        <img src={ArrowRight} alt="Flèche de direction à droite" />
+        <img
+          src={ArrowRight}
+          alt="Flèche de direction à droite"
+          width="auto"
+          height="77px"
+        />
       </TopWrapper>
       <Title1>Producteurs permanents</Title1>
       <ContainerAutres>

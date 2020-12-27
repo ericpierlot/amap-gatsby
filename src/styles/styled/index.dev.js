@@ -52,7 +52,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 200px;\n  text-align: center;\n  color: white;\n  font-weight: bold;\n  text-transform: uppercase;\n  background-color: #abd8bb;\n  transform: translateY(-1px);\n  @media (max-width: 1100px) {\n    height: 250px;\n  }\n  p {\n    font-size: 1.2rem;\n    width: 40%;\n    margin: auto;\n    :first-child {\n      padding-top: 2rem;\n    }\n    @media (max-width: 1100px) {\n      width: 90%;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 200px;\n  text-align: center;\n  color: black;\n  font-weight: bold;\n  text-transform: uppercase;\n  background-color: #abd8bb;\n  transform: translateY(-1px);\n  @media (max-width: 1100px) {\n    height: 250px;\n  }\n  p {\n    font-size: 1.2rem;\n    width: 40%;\n    margin: auto;\n    :first-child {\n      padding-top: 2rem;\n    }\n    @media (max-width: 1100px) {\n      width: 90%;\n    }\n  }\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -72,7 +72,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  text-transform: uppercase;\n  padding: 12px 24px;\n  border: none;\n  outline: none;\n  border-radius: 30px;\n  color: white;\n  font-weight: 700;\n  background-color: #5c026a;\n  cursor: pointer;\n  transition: all 330ms ease;\n  :hover {\n    background-color: #846adc;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  text-transform: uppercase;\n  padding: 12px 24px;\n  border: none;\n  outline: none;\n  border-radius: 30px;\n  color: white;\n  font-weight: 700;\n  background-color: #5c026a;\n  cursor: pointer;\n  transition: background-color 330ms ease;\n  :hover {\n    background-color: #846adc;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;

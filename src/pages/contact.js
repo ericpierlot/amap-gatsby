@@ -156,9 +156,7 @@ const Contact = () => {
         }}
       >
         <TopWrapper style={{ justifyContent: "space-around" }}>
-          <img src={ArrowLeft} alt="Flèche de direction à gauche" />
           <Title2 style={{ color: "white" }}>Nous trouver</Title2>
-          <img src={ArrowRight} alt="Flèche de direction à droite" />
         </TopWrapper>
       </GreenBlock>
       <Container2>
@@ -189,9 +187,19 @@ const Contact = () => {
       </Container2>
       <Wrapper>
         <TopWrapper style={{ justifyContent: "space-around" }}>
-          <img src={ArrowLeft} alt="Flèche de direction à gauche" />
+          <img
+            src={ArrowLeft}
+            alt="Flèche de direction à gauche"
+            width="auto"
+            height="77px"
+          />
           <Title2>Nous écrire</Title2>
-          <img src={ArrowRight} alt="Flèche de direction à droite" />
+          <img
+            src={ArrowRight}
+            alt="Flèche de direction à droite"
+            width="auto"
+            height="77px"
+          />
         </TopWrapper>
       </Wrapper>
       <Container2>

@@ -126,9 +126,19 @@ const Devenir = () => {
       <SEO title="Devenir membre" />
       <Wrapper>
         <TopWrapper style={{ justifyContent: "space-around" }}>
-          <img src={ArrowLeft} alt="Flèche de direction à gauche" />
+          <img
+            src={ArrowLeft}
+            alt="Flèche de direction à gauche"
+            width="auto"
+            height="77px"
+          />
           <Title2>Devenir membre</Title2>
-          <img src={ArrowRight} alt="Flèche de direction à droite" />
+          <img
+            src={ArrowRight}
+            alt="Flèche de direction à droite"
+            width="auto"
+            height="77px"
+          />
         </TopWrapper>
       </Wrapper>
       <Wrapper style={{ marginTop: "0" }}>

@@ -161,9 +161,19 @@ const IndexPage = () => {
       </Container>
       <Wrapper>
         <TopWrapper>
-          <img src={ArrowLeft} alt="Flèche de direction à gauche" />
+          <img
+            src={ArrowLeft}
+            alt="Flèche de direction à gauche"
+            width="auto"
+            height="77px"
+          />
           <Title2>Découvrez nos producteurs</Title2>
-          <img src={ArrowRight} alt="Flèche de direction à droite" />
+          <img
+            src={ArrowRight}
+            alt="Flèche de direction à droite"
+            width="auto"
+            height="77px"
+          />
         </TopWrapper>
         <ImageContainer>
           <BlocImages>
@@ -185,7 +195,7 @@ const IndexPage = () => {
               <img
                 src={Poules}
                 alt="Poulailler en plein air"
-                width="396"
+                width="270"
                 height="180"
               />
             </div>

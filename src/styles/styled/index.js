@@ -42,7 +42,7 @@ export const Btn = styled.button`
   font-weight: 700;
   background-color: #5c026a;
   cursor: pointer;
-  transition: all 330ms ease;
+  transition: background-color 330ms ease;
   :hover {
     background-color: #846adc;
   }
@@ -63,7 +63,7 @@ export const GreenBlock = styled.div`
   width: 100%;
   height: 200px;
   text-align: center;
-  color: white;
+  color: black;
   font-weight: bold;
   text-transform: uppercase;
   background-color: #abd8bb;
