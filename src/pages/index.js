@@ -5,11 +5,11 @@ import styled from "styled-components"
 // Images
 import ArrowRight from "../images/fleches-04.png"
 import ArrowLeft from "../images/fleches-05.png"
-import ProducteurAmapien from "../images/PRODUCTEUR-AMAPIEN-02-1024x922.jpg"
-import Pommes from "../images/pommes2000px-1024x682.jpg"
-import Poules from "../images/AdobeStock_220277518-1024x465.jpeg"
-import Miel from "../images/POT-DE-MIEL2000px-1024x682.jpg"
-import Pain from "../images/PAIN-BIO-COMPLET-scaled-1-1024x576.jpeg"
+import ProducteurAmapien from "../images/amap-producteur.png"
+import Pommes from "../images/pommes.jpg"
+import Poules from "../images/chicken-outdoor.jpg"
+import Miel from "../images/honeypot.jpg"
+import Pain from "../images/painbio.jpg"
 
 import {
   TopAccroche,
