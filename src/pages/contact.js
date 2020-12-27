@@ -182,10 +182,8 @@ const Contact = () => {
             height="500"
             title="Carte de l'association pour nous contacter"
             src="https://maps.google.com/maps?q=437%20Avenue%20Napol%C3%A9on%20Bonaparte&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            frameborder="0"
             scrolling="no"
-            marginheight="0"
-            marginwidth="0"
+            style={{ border: "1px solid black" }}
           />
         </Bloc>
       </Container2>

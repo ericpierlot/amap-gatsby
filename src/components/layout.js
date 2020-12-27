@@ -24,26 +24,26 @@ const Layout = ({ children }) => {
       <Header>
         <Navigation>
           <Link to="/">
-            {window.location.pathname === "/" && (
+            {children[0].props.title === "Légumes, oeuf, pain bio" && (
               <img src={logoAMAP} alt="logo de l'AMAP Isle sur la Sorgues" />
             )}
-            {window.location.pathname === "/association" && (
+            {children[0].props.title === "L'association" && (
               <img src={logoAMAP2} alt="logo de l'AMAP Isle sur la Sorgues" />
             )}
-            {window.location.pathname === "/paniers" && (
+            {children[0].props.title === "Les paniers" && (
               <img src={logoAMAP3} alt="logo de l'AMAP Isle sur la Sorgues" />
             )}
-            {window.location.pathname === "/producteurs" && (
+            {children[0].props.title === "Les producteurs" && (
               <img src={logoAMAP} alt="logo de l'AMAP Isle sur la Sorgues" />
             )}
-            {window.location.pathname === "/actualites" && (
-              <img src={logoAMAP3} alt="logo de l'AMAP Isle sur la Sorgues" />
-            )}
-            {window.location.pathname === "/contact" && (
+            {children[0].props.title === "Actualités" && (
               <img src={logoAMAP2} alt="logo de l'AMAP Isle sur la Sorgues" />
             )}
-            {window.location.pathname === "/devenir" && (
+            {children[0].props.title === "Contact" && (
               <img src={logoAMAP3} alt="logo de l'AMAP Isle sur la Sorgues" />
+            )}
+            {children[0].props.title === "Devenir membre" && (
+              <img src={logoAMAP} alt="logo de l'AMAP Isle sur la Sorgues" />
             )}
           </Link>
           <ul>
