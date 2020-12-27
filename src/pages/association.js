@@ -43,9 +43,7 @@ const Left = styled.div`
   }
   button {
     margin-top: 2rem;
-    @media (max-width: 1100px) {
-      margin-bottom: 5rem;
-    }
+    margin-bottom: 5rem;
   }
 
   ul {
@@ -95,14 +93,17 @@ const BlocLinear = styled.div`
     rgba(179, 225, 194, 1) 0%,
     rgba(110, 193, 228, 1) 100%
   );
-
+  margin: auto;
   p {
     font-size: 3rem;
     width: 41%;
     margin: auto;
+    padding: 1rem;
     text-shadow: 1px 1px 30px rgba(0, 0, 0, 0.2);
     @media (max-width: 1100px) {
-      width: 90%;
+      width: 100%;
+      margin: auto;
+      font-size: 2rem;
     }
   }
 `

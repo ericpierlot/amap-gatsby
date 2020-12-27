@@ -42,7 +42,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  padding-top: 7rem;\n  width: 60%;\n  margin: auto;\n  display: flex;\n  img {\n    width: 40%;\n  }\n  @media (max-width: 1100px) {\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    width: 90%;\n    img {\n      margin: 2rem 0;\n      min-width: 500px;\n    }\n  }\n  @media (max-width: 1500px) {\n    width: 90%;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  padding-top: 7rem;\n  width: 60%;\n  margin: auto;\n  display: flex;\n  img {\n    width: 40%;\n  }\n  @media (max-width: 1100px) {\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    width: 90%;\n    img {\n      margin: 2rem 0;\n      width: 90%;\n      height: auto;\n    }\n  }\n  @media (max-width: 1500px) {\n    width: 90%;\n  }\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;

@@ -99,7 +99,8 @@ export const Container = styled.div`
     width: 90%;
     img {
       margin: 2rem 0;
-      min-width: 500px;
+      width: 90%;
+      height: auto;
     }
   }
   @media (max-width: 1500px) {

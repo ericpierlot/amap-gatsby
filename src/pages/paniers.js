@@ -37,7 +37,7 @@ const Container = styled.section`
 `
 
 const Bloc = styled.div`
-  min-width: 45%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,7 +66,21 @@ const Bloc = styled.div`
     padding-bottom: 1rem;
   }
 
+  iframe {
+    width: 100%;
+  }
   margin-bottom: 7rem;
+  @media (max-width: 1500px) {
+    width: 80%;
+  }
+  @media (max-width: 1100px) {
+    width: 80%;
+    flex-direction: column;
+  }
+  @media (max-width: 740px) {
+    width: 90%;
+    flex-direction: column;
+  }
 `
 
 const Separation = styled.div`
@@ -211,7 +225,7 @@ const PaniersPage = () => (
         btntxt="Télécharger ce formulaire"
       />
     </ContainerAutres>
-    <Container>
+    <Container style={{ alignItems: "flex-start" }}>
       <Bloc>
         <Title2 style={{ marginBottom: "2rem" }}>
           Où récupérer son panier ?
@@ -229,7 +243,18 @@ const PaniersPage = () => (
           <strong>84800 Isle-sur-la-Sorgue</strong>
         </p>
       </Bloc>
-      <Bloc></Bloc>
+      <Bloc>
+        <iframe
+          width="600"
+          height="500"
+          title="Carte de l'association"
+          src="https://maps.google.com/maps?q=437%20Avenue%20Napol%C3%A9on%20Bonaparte&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"
+        />
+      </Bloc>
     </Container>
   </Layout>
 )
