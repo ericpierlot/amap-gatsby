@@ -5,8 +5,7 @@
  */
 
 // You can delete this file if you're not using it
-exports.onCreateWebpackConfig = ({ getConfig, stage }) => {
-  const actions = getConfig()
+exports.onCreateWebpackConfig = ({ actions, getConfig, stage }) => {
   if (stage === "build-javascript") {
     // Turn off source maps
     actions.setWebpackConfig({

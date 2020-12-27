@@ -13,9 +13,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  */
 // You can delete this file if you're not using it
 exports.onCreateWebpackConfig = function (_ref) {
-  var getConfig = _ref.getConfig,
+  var actions = _ref.actions,
+      getConfig = _ref.getConfig,
       stage = _ref.stage;
-  var actions = getConfig();
 
   if (stage === "build-javascript") {
     // Turn off source maps
